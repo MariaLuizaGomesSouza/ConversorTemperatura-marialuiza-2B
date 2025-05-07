@@ -1,15 +1,18 @@
-public class Fahrenheit extends Temperatura{
+
+public class Fahrenheit extends Temperatura {
+
     //Construtor
     public Fahrenheit(double graustemp) {
         super(graustemp);
     }
-     //Coverter kevin para celsius
-    public double paraCelsius(){
-        return getGraus()-273.15;
+    //Método para converter de fahrenhit para celsius
+
+    public double paraCelsius() {
+        return (getGraus() - 32) * 5 / 9;
     }
-    
-    //Converte de kelvin para fahrenheit
-    public double paraFahrenheit(){
-        return ((getGraus()-273.15)*9/5)+32;
+
+    //Converte de fahrenheit para kelvin
+    public double paraKelvin() {
+        return (getGraus() - 32) * 9 / 5 + 273.15;
     }
 }
